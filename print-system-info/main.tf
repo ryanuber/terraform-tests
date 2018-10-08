@@ -11,7 +11,11 @@ awk '/^MemTotal:/{print $2}' /proc/meminfo | tr -d '\n'
 echo '",'
 
 echo -n '"cpu_cores":"'
-awk /^processor/ /proc/cpuinfo| wc -l | tr -d '\n'
+awk /^processor/ /proc/cpuinfo | wc -l | tr -d '\n'
+echo '",'
+
+echo -n '"cpu_core_mhz":"'
+awk '/^cpu MHz/{print $4}' /proc/cpuinfo | head -1 | tr -d '\n'
 echo '"'
 
 echo '}'
