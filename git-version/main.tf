@@ -1,3 +1,5 @@
+resource "null_resource" "foo" { }
+
 data "external" "git_version" {
   program = ["./git-version.sh"]
 }
