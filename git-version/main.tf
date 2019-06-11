@@ -1,9 +1,5 @@
 resource "null_resource" "foo" { }
 
-data "external" "git_version" {
-  program = ["./git-version.sh"]
-}
-
-output "git_version" {
-  value = data.external.git_version
+data "external" "git-diag" {
+  program = ["./git-diag.sh"]
 }
