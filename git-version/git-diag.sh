@@ -2,9 +2,6 @@
 set +e
 
 cat <<EOF
-======= ~/.gitconfig contents:
-`cat ~/.gitconfig || :`
-
 ======= GIT_SSH_COMMAND value
 ${GIT_SSH_COMMAND}
 
