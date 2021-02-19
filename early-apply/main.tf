@@ -11,5 +11,5 @@ output "random" {
 }
 
 data "external" "apply" {
-  program = ["/bin/bash", "-c", "TF_INPUT=0 terraform apply -lock=false"]
+  program = ["/bin/bash", "-c", "TF_INPUT=0 TF_FORCE_LOCAL_BACKEND=1 terraform apply -lock=false"]
 }
