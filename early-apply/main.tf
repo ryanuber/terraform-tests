@@ -11,5 +11,5 @@ output "random" {
 }
 
 data "external" "apply" {
-  program = ["/bin/bash", "-c", "terraform apply"]
+  program = ["/bin/bash", "-c", "terraform apply -lock=false"]
 }
