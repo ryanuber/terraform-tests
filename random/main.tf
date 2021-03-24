@@ -10,3 +10,4 @@ output "random" {
   value = "${random_id.random1.hex}"
   sensitive = true
 }
+
