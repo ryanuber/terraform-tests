@@ -5,6 +5,10 @@ data "http" "github_rate_limit" {
   }
 }
 
-output "rate_limit_response" {
+output "rate_limit_headers" {
   value = data.http.github_rate_limit.response_headers
+}
+
+output "rate_limit_body" {
+  value = data.http.github_rate_limit.body
 }
