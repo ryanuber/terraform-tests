@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "begin `date`"
-touch {0..50000}
-rm {0..50000}
+touch {0..100000}
+rm {0..100000}
 echo "end `date`"
