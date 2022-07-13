@@ -1,11 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-mkdir tmp
-
-i=0
 echo "begin `date`"
-while [ $i -lt 10000 ]; do
-    i=$((i+1))
-    touch $i
-done
+touch {0..50000}
+rm {0..50000}
 echo "end `date`"
