@@ -12,4 +12,4 @@ while [ $i -lt 10000 ]; do
 done
 echo "end `date`"
 
-kill $SLEEP_PID
+kill -9 $SLEEP_PID
