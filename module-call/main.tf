@@ -1,4 +1,4 @@
-module "nonsense-words" {
-  source  = "alisdair/nonsense-words/random"
-  version = "1.0.0"
+module "uuid" {
+  source  = "Invicton-Labs/uuid/random"
+  version = "0.2.0"
 }
