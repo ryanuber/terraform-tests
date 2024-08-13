@@ -16,6 +16,10 @@ echo '",'
 
 echo -n '"cpu_core_mhz":"'
 awk '/^cpu MHz/{print $4}' /proc/cpuinfo | head -1 | tr -d '\n'
+echo '",'
+
+echo -n '"root_disk_size":"'
+df -h / | tail -1 | awk '{print $2}'
 echo '"'
 
 echo '}'
